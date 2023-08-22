@@ -1,0 +1,49 @@
+<html>
+    <title>Employee Information</title>
+    <body>
+
+        <label for="month">Select a Month:</label>
+      <select name="month" id="month">
+  <optgroup >
+    <option value="jan">January</option>
+    <option value="saab">Feb</option>
+    <option value="saab">March</option>
+    <option value="saab">April</option>
+    <option value="saab">May</option>
+    <option value="saab">June</option>
+    <option value="saab">July</option>
+    <option value="saab">Augest</option>
+    <option value="saab">September</option>
+    <option value="saab">October</option>
+    <option value="saab">November</option>
+    <option value="saab">December</option>
+  </optgroup>
+</select>
+    
+        <table>
+            <tr>
+             
+                <!-- <th>name</th> -->
+                <th>permission_date</th><br>
+                <th>permissionTime_from</th>
+                <th>permissionTime_To</th>
+                <th>reason</th>
+                <th>Status</th>
+                
+            </tr>
+            <br>
+            {% for data1 in obj %}
+            <tr> 
+                <!-- <td>{{data2.name}}</td> -->
+                <td>{{data1.permission_date}}</td>
+                <td>{{data1.permissionTime_from}}</td>
+                <td>{{data1.permissionTime_To}}</td>
+                <td>{{data1.reason}}</td>
+                <td>{{data1.Status}}</td>
+             
+            </tr>
+            {% endfor %}
+        </table>
+        
+    </body>
+  </html>

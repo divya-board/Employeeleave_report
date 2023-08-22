@@ -1,0 +1,32 @@
+<html>
+    <title>Employee Information</title>
+    <body>
+        <h1 style="margin-left:250px">Employee Leave Information</h1>
+        <table>
+            <tr>
+                <th>permission_date</th>
+                <th>permissionTime_from</th>
+                <th>Leave_Date_From</th>
+                <th>Leave_Date_To</th>
+                <th>Leave_Reason</th>
+                <th>Leave_Type</th>
+                <th>Leave_Session</th>
+                <th>Leave_Status</th>
+            </tr>
+            {% for data in obj1 %}
+            <tr> 
+                <td>{{data.emp_id}}</td>
+                <td>{{data.emp_name}}</td>
+                <td>{{data.leave_date_from}}</td>
+                <td>{{data.leave_date_to}}</td>
+                <td>{{data.leave_reason}}</td>
+                <td>{{data.leave_type}}</td>
+                <td>{{data.leave_session}}</td>
+                <td>{{data.Status}}</td>      
+            </tr>
+            {% endfor %}
+        </table>
+        
+    </body>
+  </html>
+
